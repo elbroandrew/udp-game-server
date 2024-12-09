@@ -8,7 +8,7 @@ def main():
     
     udp_socket.sendto(msg, ('127.0.0.1', 5001))  # same as UDP server socket
 
-    udp_socket.settimeout(10)
+    udp_socket.settimeout(20)
 
     msg, server = udp_socket.recvfrom(1024)
     msg = bytes.decode(msg)
